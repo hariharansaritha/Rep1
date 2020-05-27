@@ -1,0 +1,60 @@
+p a:hover {
+	color: green;
+	background-color: pink;
+}
+
+p a {
+	color: red;
+	background-color: white;
+}
+
+p a:visited {
+	color: yellow;
+	background-color: blue;
+}
+
+p a:active {
+	color: yellow;
+	background-color: blue;
+}
+
+button {
+	background: blue
+}
+
+#one {
+	background: purple
+}
+
+#second p {
+	color: black;
+	background-color: greenyellow;
+	border: 1px dashed red;
+}
+
+#flex {
+	display: flex;
+	height: 300px;
+	flex-direction: column;
+	flex-wrap: wrap;
+	border: 1px solid black;
+}
+
+#flex div {
+	background: red;
+	width: 100;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	background: white;
+}
+
+div a button {
+	colo
+}
+
+.rcsfr {}
