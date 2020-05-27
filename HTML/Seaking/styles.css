@@ -24,6 +24,7 @@
 .container{
     max-width: 100%;
     margin: auto;
+    top:0;
 }
 .container video{
     display: block;
