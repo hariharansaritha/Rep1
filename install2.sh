@@ -6,7 +6,7 @@ volta install node
 echo -e "\n\nInstalling Yarn..."
 volta install yarn
 echo -e "\n\n"
-read -p "\n\nPlease specify a location to clone the repository (or press Enter for default location): " repo_location
+read -p "Please specify a location to clone the repository (or press Enter for default location): " repo_location
 if [ -z "$repo_location" ]; then
   repo_location=$HOME
 fi
