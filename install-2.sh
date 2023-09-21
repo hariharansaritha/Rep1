@@ -16,23 +16,21 @@ yarn install
 attempt=0
 max_attempts=3
 while true; do
+  echo "Debug: Starting loop"
   echo -e "\n\nStarting DDT..."
   read -t 10 -p "Do you want to start DDT now? (y/n) " start_ddt || start_ddt="n"
+  echo "Debug: Value of start_ddt is: $start_ddt"
   case $start_ddt in
     [Yy]* )
       echo "Running the development server..."
       yarn run tauri dev
       break;;
     [Nn]* )
-      echo "Not starting DDT."
+      echo "Debug: No selected"
       break;;
     * )
-      attempt=$((attempt + 1))
-      if [ "$attempt" -ge "$max_attempts" ]; then
-        echo "Maximum attempts reached. Exiting."
-        exit 1
-      else
-        echo "Invalid input. Please enter y or n."
-      fi;;
+      echo "Invalid input. Please enter y or n.";;
   esac
 done
+echo "Debug: Loop ended"
+
