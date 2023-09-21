@@ -27,7 +27,7 @@ sudo apt install -y mitmproxy libglib2.0-dev libsoup2.4-dev libjavascriptcoregtk
 cd $repo_location/Deakin-Detonator-Toolkit
 yarn install
 echo -e "\n\nCleaning up..."
-sudo apt autoremove
+sudo apt autoremove -y
 echo -e "\nDone..."
 echo -e "\n\n-----------------------------"
 echo -e "Installing Exploits"
