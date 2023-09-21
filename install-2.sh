@@ -18,7 +18,10 @@ max_attempts=3
 while true; do
   echo "Debug: Starting loop"
   echo -e "\n\nStarting DDT..."
-  read -t 10 -p "Do you want to start DDT now? (y/n) " start_ddt || start_ddt="n"
+  unset start_ddt
+  read -t 10 -p "Do you want to start DDT now? (y/n) " start_ddt
+  if [ -z "$start_ddt" ]; then
+    start_ddt="n"
   echo "Debug: Value of start_ddt is: $start_ddt"
   case $start_ddt in
     [Yy]* )
@@ -33,4 +36,5 @@ while true; do
   esac
 done
 echo "Debug: Loop ended"
+
 
