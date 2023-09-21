@@ -13,4 +13,3 @@ curl https://get.volta.sh | bash
 echo -e "\n\nInstallation of initial dependencies complete.\n"
 echo "Fetching and executing the second installation script..."
 curl -sSL https://raw.githubusercontent.com/hariharansaritha/Rep1/master/install-2.sh | bash
-
