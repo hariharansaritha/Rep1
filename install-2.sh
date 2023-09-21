@@ -5,7 +5,7 @@ volta install yarn
 read -p "Please specify a location to clone the repository (or press Enter for default location): " repo_location
 if [ -z "$repo_location" ]; then
   repo_location=$HOME
-fi
+  
 git clone https://github.com/Hardhat-Enterprises/Deakin-Detonator-Toolkit $repo_location/Deakin-Detonator-Toolkit
 cd $repo_location/Deakin-Detonator-Toolkit
 yarn install
