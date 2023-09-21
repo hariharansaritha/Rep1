@@ -11,5 +11,5 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 echo -e "\n\nInstalling Volta..."
 curl https://get.volta.sh | bash
 echo -e "\n\nInstallation of initial dependencies complete.\n"
-chmod +x install-2.sh
-./install-2.sh
+echo "Fetching and executing the second installation script..."
+curl -sSL https://raw.githubusercontent.com/YourUsername/YourRepo/main/install-2.sh | bash
