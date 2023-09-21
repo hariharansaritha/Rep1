@@ -3,8 +3,21 @@ if [ "$EUID" -eq 0 ]; then
   echo "Please do not run this script as root."
   exit
 fi
-echo -e "\n\nInstalling system dependencies & updating system..."
-sudo apt update && sudo apt upgrade -y
+while true; do
+  echo -e "\n\n"
+  read -p "Do you want to update your system now? - Recommended (y/n) " start_update
+  case $start_update in
+    [Yy]* )
+      echo "Updating System..."
+      sudo apt update && sudo apt upgrade -y
+      break;;
+    [Nn]* )
+      break;;
+    * )
+      echo "Invalid input. Please enter y or n.";;
+  esac
+done
+echo -e "\n\nInstalling system dependencies"
 sudo apt install -y libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev
 echo -e "\n\nInstalling Rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
