@@ -1,0 +1,3 @@
+Install Script: curl -sSL https://raw.githubusercontent.com/hariharansaritha/Rep1/master/install-1.sh -o install.sh && bash install.sh
+
+To update: The URL in the above command and the URL in script 1 pointing to script 2.
