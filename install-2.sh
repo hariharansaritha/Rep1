@@ -6,7 +6,7 @@ volta install node
 echo -e "\n\nInstalling Yarn..."
 volta install yarn
 echo -e "\n\n"
-read -p "\n\nPlease specify a location to clone the repository (or press Enter for default location): " repo_location
+read -p "Please specify a location to clone the repository (or press Enter for default location): " repo_location
 if [ -z "$repo_location" ]; then
   repo_location=$HOME
 git clone https://github.com/Hardhat-Enterprises/Deakin-Detonator-Toolkit $repo_location/Deakin-Detonator-Toolkit
@@ -15,7 +15,7 @@ cd $repo_location/Deakin-Detonator-Toolkit
 yarn install
 while true; do
   echo -e "\n\nStarting DDT..."
-  read -p "Do you want to start DDT now? (y/n) " start_ddt
+  read -t 10 -p "Do you want to start DDT now? (y/n) " start_ddt || start_ddt="n"
   case $start_ddt in
     [Yy]* )
       echo "Running the development server..."
