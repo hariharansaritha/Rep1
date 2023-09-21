@@ -5,7 +5,7 @@ volta install yarn
 read -p "Please specify a location to clone the repository (or press Enter for default location): " repo_location
 if [ -z "$repo_location" ]; then
   repo_location=$HOME
-fi
+  fi
 git clone https://github.com/Hardhat-Enterprises/Deakin-Detonator-Toolkit $repo_location/Deakin-Detonator-Toolkit
 cd $repo_location/Deakin-Detonator-Toolkit
 yarn install
@@ -14,7 +14,7 @@ while true; do
   read -t 10 -p "Do you want to start DDT now? (y/n) " start_ddt
   if [ -z "$start_ddt" ]; then
     start_ddt="n"
-  fi
+    fi
   case $start_ddt in
     [Yy]* )
       yarn run tauri dev
