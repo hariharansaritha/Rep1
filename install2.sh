@@ -1,17 +1,17 @@
 #!/bin/bash
-echo "\n\n-----------------------------"
+echo -e "\n\n-----------------------------"
 echo -e "Configuring Volta..."
-echo "-----------------------------"
+echo -e "-----------------------------"
 source ~/.zshrc > /dev/null 2>&1
 echo -e "\n Done..."
-echo "\n\n-----------------------------"
+echo -e "\n\n-----------------------------"
 echo -e "\n\nInstalling Node.js"
-echo "-----------------------------"
+echo -e "-----------------------------"
 volta install node
 echo -e "\n Done..."
-echo "\n\n-----------------------------"
+echo -e "\n\n-----------------------------"
 echo -e "Installing Yarn"
-echo "-----------------------------"
+echo -e "-----------------------------"
 volta install yarn
 echo -e "\n Done..."
 echo -e "\n\n"
@@ -20,16 +20,16 @@ if [ -z "$repo_location" ]; then
   repo_location=$HOME
 fi
 git clone https://github.com/Hardhat-Enterprises/Deakin-Detonator-Toolkit $repo_location/Deakin-Detonator-Toolkit
-echo "\n\n-----------------------------------------------"
+echo -e "\n\n-----------------------------------------------"
 echo -e "Installing project dependencies"
-echo "-----------------------------------------------"
+echo -e "-----------------------------------------------"
 sudo apt install -y mitmproxy libglib2.0-dev libsoup2.4-dev libjavascriptcoregtk-4.0-18 libjavascriptcoregtk-4.0-dev libwebkit2gtk-4.1-0 libwebkit2gtk-4.1-dev openjdk-11-jdk cargo nodejs dsniff enum4linux dnsmap goldeneye wpscan parsero arjun sherlock
 cd $repo_location/Deakin-Detonator-Toolkit
 yarn install
 echo -e "\n Done..."
-echo "\n\n-----------------------------"
+echo -e "\n\n-----------------------------"
 echo -e "Installing Exploits"
-echo "-----------------------------"
+echo -e "-----------------------------"
 sudo mkdir -p /usr/share/ddt/
 sudo cp -r src-tauri/exploits/* /usr/share/ddt/
 echo -e "\n Done..."
@@ -38,12 +38,12 @@ while true; do
   read -p "Do you want to start DDT now? (y/n) " start_ddt
   case $start_ddt in
     [Yy]* )
-      echo "Running the development server..."
+      echo -e "Running the development server..."
       yarn run tauri dev
       break;;
     [Nn]* )
       break;;
     * )
-      echo "Invalid input. Please enter y or n.";;
+      echo -e "Invalid input. Please enter y or n.";;
   esac
 done
