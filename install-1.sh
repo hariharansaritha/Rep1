@@ -31,9 +31,9 @@ echo "-----------------------------"
 echo -e "\n\nInstalling Volta"
 echo "-----------------------------"
 curl https://get.volta.sh | bash
-echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo "-------------------------------------------------------------"
 echo -e "\n\nInstallation of initial dependencies complete.\n"
-echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo "-------------------------------------------------------------"
 echo -e "\n\n"
 echo "Fetching and executing the second installation script..."
 curl -sSL https://raw.githubusercontent.com/hariharansaritha/Rep1/master/install2.sh -o install2.sh && bash install2.sh
