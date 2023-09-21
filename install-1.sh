@@ -2,6 +2,7 @@
 if [ "$EUID" -eq 0 ]; then
   echo "Please do not run this script as root."
   exit
+fi
 echo -e "\n\nInstalling system dependencies..."
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev
