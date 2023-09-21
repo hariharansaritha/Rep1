@@ -5,7 +5,7 @@ echo -e "-----------------------------"
 source ~/.zshrc > /dev/null 2>&1
 echo -e "\nDone..."
 echo -e "\n\n-----------------------------"
-echo -e "\n\nInstalling Node.js"
+echo -e "Installing Node.js"
 echo -e "-----------------------------"
 volta install node
 echo -e "\nDone..."
