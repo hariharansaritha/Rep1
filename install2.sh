@@ -26,6 +26,11 @@ echo "-----------------------------------------------"
 sudo apt install -y mitmproxy libglib2.0-dev libsoup2.4-dev libjavascriptcoregtk-4.0-18 libjavascriptcoregtk-4.0-dev libwebkit2gtk-4.1-0 libwebkit2gtk-4.1-dev openjdk-11-jdk cargo nodejs dsniff enum4linux dnsmap goldeneye wpscan parsero arjun sherlock
 cd $repo_location/Deakin-Detonator-Toolkit
 yarn install
+echo "-----------------------------"
+echo -e "\n\nInstalling Exploits"
+echo "-----------------------------"
+sudo mkdir -p /usr/share/ddt/
+sudo cp -r src-tauri/exploits/* /usr/share/ddt/
 while true; do
   echo -e "\n\nStarting DDT..."
   read -p "Do you want to start DDT now? (y/n) " start_ddt
