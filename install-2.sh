@@ -14,7 +14,7 @@ while true; do
   read -t 10 -p "Do you want to start DDT now? (y/n) " start_ddt
   if [ -z "$start_ddt" ]; then
     start_ddt="n"
-    fi
+  fi
   case $start_ddt in
     [Yy]* )
       yarn run tauri dev
