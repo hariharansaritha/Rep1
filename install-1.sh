@@ -17,8 +17,8 @@ while true; do
       echo "Invalid input. Please enter y or n.";;
   esac
 done
-echo -e "\n\nInstalling system dependencies"
-sudo apt install -y libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev
+echo -e "\n\nInstalling dependencies"
+sudo apt install -y libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev python3-impacket
 echo -e "\n\nInstalling Rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 echo -e "\n\nInstalling Volta..."
