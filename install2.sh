@@ -47,3 +47,5 @@ while true; do
       echo -e "Invalid input. Please enter y or n.";;
   esac
 done
+cd ..
+rm install.sh
