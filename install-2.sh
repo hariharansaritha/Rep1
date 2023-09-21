@@ -9,7 +9,6 @@ echo -e "\n\n"
 read -p "\n\nPlease specify a location to clone the repository (or press Enter for default location): " repo_location
 if [ -z "$repo_location" ]; then
   repo_location=$HOME
-fi
 git clone https://github.com/Hardhat-Enterprises/Deakin-Detonator-Toolkit $repo_location/Deakin-Detonator-Toolkit
 echo -e "\n\nInstalling project dependencies..."
 cd $repo_location/Deakin-Detonator-Toolkit
