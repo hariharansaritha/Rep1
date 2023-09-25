@@ -22,9 +22,6 @@ fi
 git clone https://github.com/Hardhat-Enterprises/Deakin-Detonator-Toolkit $repo_location/Deakin-Detonator-Toolkit
 cd $repo_location/Deakin-Detonator-Toolkit
 yarn install
-echo -e "\n\nCleaning up..."
-sudo apt autoremove -y
-echo -e "\nDone..."
 echo -e "\n\n-----------------------------"
 echo -e "Installing Exploits"
 echo -e "-----------------------------"
