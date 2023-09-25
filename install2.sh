@@ -28,6 +28,8 @@ echo -e "-----------------------------"
 sudo mkdir -p /usr/share/ddt/
 sudo cp -r src-tauri/exploits/* /usr/share/ddt/
 echo -e "\nDone..."
+rm install.sh
+rm install2.sh
 while true; do
   echo -e "\n\nStarting DDT..."
   read -p "Do you want to start DDT now? (y/n) " start_ddt
@@ -42,6 +44,3 @@ while true; do
       echo -e "Invalid input. Please enter y or n.";;
   esac
 done
-cd ..
-rm install.sh
-rm install2.sh
