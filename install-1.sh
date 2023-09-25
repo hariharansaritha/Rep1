@@ -30,6 +30,9 @@ git clone https://github.com/ffuf/ffuf.git && cd ffuf && go get && go build && c
 git clone https://github.com/laramies/theHarvester.git && cd theHarvester && pip install -r requirements.txt && cd .. && \
 git clone https://github.com/laramies/metagoofil.git && cd metagoofil && pip install -r requirements.txt && cd ..
 echo -e "\nDone..."
+echo -e "\n\nCleaning up..."
+sudo apt autoremove -y
+echo -e "\nDone..."
 echo -e "\n\n-----------------------------"
 echo -e "Installing Rust"
 echo -e "-----------------------------"
